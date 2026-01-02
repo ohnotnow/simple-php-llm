@@ -45,7 +45,7 @@ echo $response->model;               // "gpt-5.2"
 $client = new Client(provider: 'anthropic', model: 'claude-sonnet-4-20250514');
 
 // Litellm-style shorthand
-$client = new Client(from: 'openrouters/openai/gpt-5.2');
+$client = new Client(from: 'openrouter/openai/gpt-5.2');
 ```
 
 ## Max Tokens
