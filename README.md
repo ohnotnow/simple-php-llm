@@ -7,7 +7,7 @@ No streaming. No tool calls. No agents, tool calls, multi-modal. Just the basics
 ## Installation
 
 ```bash
-composer require ohnotnow/simple-php-llm
+composer require ohffs/simple-php-llm
 ```
 
 ## Quick Start
