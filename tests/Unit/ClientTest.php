@@ -32,6 +32,19 @@ test('client throws exception for invalid from format', function () {
     new Client(from: 'invalid-format');
 })->throws(InvalidArgumentException::class);
 
+test('client handles openrouter nested model paths', function () {
+    // OpenRouter models can be 'openrouter/model' or 'openrouter/provider/model'
+    $client = new Client(from: 'openrouter/google/gemini-3-pro');
+
+    $client->fake([
+        new Response(textContent: 'Hello', usage: new Usage(10, 5), model: 'google/gemini-3-pro'),
+    ]);
+
+    $response = $client->send([['role' => 'user', 'content' => 'Hi']]);
+
+    expect($response->textContent)->toBe('Hello');
+});
+
 test('client can use fake responses', function () {
     $client = new Client(provider: 'anthropic', model: 'claude-sonnet-4-20250514');
 

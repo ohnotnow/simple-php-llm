@@ -15,7 +15,7 @@ composer require ohffs/simple-php-llm
 ```php
 use Ohffs\SimpleLlm\Client;
 
-$client = new Client(provider: 'anthropic', model: 'claude-4.5-sonnet');
+$client = new Client(provider: 'openai', model: 'gpt-5.2');
 
 $response = $client->send([
     ['role' => 'system', 'content' => 'You are a helpful assistant.'],
@@ -27,7 +27,7 @@ echo $response->textContent;
 
 echo $response->usage->inputTokens;  // 25
 echo $response->usage->outputTokens; // 12
-echo $response->model;               // "claude-4.5-sonnet"
+echo $response->model;               // "gpt-5.2"
 ```
 
 ## Supported Providers
@@ -36,7 +36,7 @@ echo $response->model;               // "claude-4.5-sonnet"
 |----------|---------------------|---------------|
 | Anthropic | `ANTHROPIC_API_KEY` | `claude-sonnet-4-20250514` |
 | OpenAI | `OPENAI_API_KEY` | `gpt-4o` |
-| OpenRouter | `OPENROUTER_API_KEY` | `anthropic/claude-3.5-sonnet` |
+| OpenRouter | `OPENROUTER_API_KEY` | `anthropic/claude-4.5-sonnet` |
 
 ## Constructor Styles
 
@@ -45,7 +45,7 @@ echo $response->model;               // "claude-4.5-sonnet"
 $client = new Client(provider: 'anthropic', model: 'claude-sonnet-4-20250514');
 
 // Litellm-style shorthand
-$client = new Client(from: 'anthropic/claude-sonnet-4-20250514');
+$client = new Client(from: 'openrouters/openai/gpt-5.2');
 ```
 
 ## Max Tokens
