@@ -1,0 +1,33 @@
+{
+    "name": "ohffs/simple-php-llm",
+    "description": "Make simple calls to LLM api's",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ohffs\\SimpleLlm\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ohffs",
+            "email": "ohffsnotnow@gmail.com"
+        }
+    ],
+    "require": {
+        "jerome/fetch-php": "^3.4"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
