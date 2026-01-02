@@ -13,6 +13,10 @@ composer require ohffs/simple-php-llm
 ## Quick Start
 
 ```php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
 use Ohffs\SimpleLlm\Client;
 
 $client = new Client(provider: 'openai', model: 'gpt-5.2');
