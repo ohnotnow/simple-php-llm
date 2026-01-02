@@ -23,7 +23,7 @@ $response = $client->send([
 ]);
 
 echo $response->textContent;
-// "The capital of Scotland is Edinburgh."
+// "The capital of Scotland is Edinburgh, sadly."
 
 echo $response->usage->inputTokens;  // 25
 echo $response->usage->outputTokens; // 12
